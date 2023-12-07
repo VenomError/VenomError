@@ -13,11 +13,11 @@
                   </li>
                   <li class="nav-item">
                       <a class="nav-link {{ $title === 'About' ? 'active' : '' }}" aria-current="page"
-                          href="/about">About</a>
+                          href="/post">About</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link {{ $title === 'Blog' ? 'active' : '' }}" aria-current="page"
-                          href="/blog">Blog</a>
+                      <a class="nav-link {{ $title === 'post' ? 'active' : '' }}" aria-current="page"
+                          href="/post">post</a>
                   </li>
 
               </ul>

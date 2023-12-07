@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Models\Post;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
 
@@ -36,65 +38,8 @@ Route::get('/about', function () {
     );
 });
 
-Route::get('/blog', function () {
-
-    $blog_post =
-        [
-            [
-                "title" => "Judul Post Pertama",
-                "slug" => "Judul-Post-Pertama",
-                "author" => "Wawan Julianto",
-                "body" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam illo aperiam, dolore eos quae harum quibusdam doloremque fugit incidunt hic provident a perspiciatis molestias ullam dolor exercitationem officia? Dolores illo, eligendi consectetur laborum magnam quo eum voluptatem dignissimos! Asperiores amet voluptatum tempore? Incidunt, magni! Cum unde, quo accusantium quod, sint alias vel optio in, provident maxime eaque. Corrupti aperiam voluptas delectus fugit eveniet numquam? Optio labore maxime quos voluptatibus fuga. Nostrum dolores obcaecati sint nemo vero blanditiis quis, necessitatibus libero? "
-            ],
-            [
-                "title" => "Judul Post Kedua",
-                "slug" => "judul-Post-Kedua",
-                "author" => "Dimas Kounter",
-                "body" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam illo aperiam, dolore eos quae harum quibusdam doloremque fugit incidunt hic provident a perspiciatis molestias ullam dolor exercitationem officia? Dolores illo, eligendi consectetur laborum magnam quo eum voluptatem dignissimos! Asperiores amet voluptatum tempore? Incidunt, magni! Cum unde, quo accusantium quod, sint alias vel optio in, provident maxime eaque. Corrupti aperiam voluptas delectus fugit eveniet numquam? Optio labore maxime quos voluptatibus fuga. Nostrum dolores obcaecati sint nemo vero blanditiis quis, necessitatibus libero? onem officia? Dolores illo, eligendi consectetur laborum magnam quo eum voluptatem dignissimos! Asperiores amet voluptatum tempore? Incidunt, magni! Cum unde, quo accusantium quod, sint alias vel optio in, provident maxime eaque. Corrupti aperiam voluptas delectus fugit eveniet numquam? Optio labore maxime quos voluptatibus fuga. Nostrum dolores obcaecati sint nemo vero blanditiis quis, necessitatibus libero? "
-            ]
-        ];
-    return view(
-        'blog',
-        [
-            'title' => 'Blog',
-            'posts' => $blog_post,
-
-        ]
-    );
-});
+Route::get('/post', [PostController::class, 'index']);
 
 //halaman single post
 
-Route::get('posts/{slug}', function ($slug) {
-
-    $blog_post =
-        [
-            [
-                "title" => "Judul Post Pertama",
-                "slug" => "Judul-Post-Pertama",
-                "author" => "Wawan Julianto",
-                "body" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam illo aperiam, dolore eos quae harum quibusdam doloremque fugit incidunt hic provident a perspiciatis molestias ullam dolor exercitationem officia? Dolores illo, eligendi consectetur laborum magnam quo eum voluptatem dignissimos! Asperiores amet voluptatum tempore? Incidunt, magni! Cum unde, quo accusantium quod, sint alias vel optio in, provident maxime eaque. Corrupti aperiam voluptas delectus fugit eveniet numquam? Optio labore maxime quos voluptatibus fuga. Nostrum dolores obcaecati sint nemo vero blanditiis quis, necessitatibus libero? "
-            ],
-            [
-                "title" => "Judul Post Kedua",
-                "slug" => "judul-Post-Kedua",
-                "author" => "Dimas Kounter",
-                "body" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam illo aperiam, dolore eos quae harum quibusdam doloremque fugit incidunt hic provident a perspiciatis molestias ullam dolor exercitationem officia? Dolores illo, eligendi consectetur laborum magnam quo eum voluptatem dignissimos! Asperiores amet voluptatum tempore? Incidunt, magni! Cum unde, quo accusantium quod, sint alias vel optio in, provident maxime eaque. Corrupti aperiam voluptas delectus fugit eveniet numquam? Optio labore maxime quos voluptatibus fuga. Nostrum dolores obcaecati sint nemo vero blanditiis quis, necessitatibus libero? onem officia? Dolores illo, eligendi consectetur laborum magnam quo eum voluptatem dignissimos! Asperiores amet voluptatum tempore? Incidunt, magni! Cum unde, quo accusantium quod, sint alias vel optio in, provident maxime eaque. Corrupti aperiam voluptas delectus fugit eveniet numquam? Optio labore maxime quos voluptatibus fuga. Nostrum dolores obcaecati sint nemo vero blanditiis quis, necessitatibus libero? "
-            ]
-        ];
-    $new_post = [];
-    foreach ($blog_post as $post) {
-        if ($post['slug'] === $slug) {
-            $new_post = $post;
-        }
-    }
-
-    return view(
-        'posts',
-        [
-            'title' => 'Sigle Post',
-            'post' => $new_post
-
-        ]
-    );
-});
+Route::get('posts/{slug}', [PostController::class, 'show']);
