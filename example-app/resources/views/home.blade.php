@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VenomErro | Home</title>
-</head>
-
-<body>
-
-</body>
-
-</html>
+@section('container')
+    <h1>Halaman {{ $title }}</h1>
+@endsection

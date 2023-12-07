@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>VenomError | About</title>
-</head>
-
-<body>
-
-</body>
-
-</html>
+@section('container')
+    <h1>Halaman {{ $title }}</h1>
+    <h3>{{ $nama }}</h3>
+    <p>{{ $email }}</p>
+    <img src="{{ $img }}" alt="{{ $nama }}" width="200" class="img-thumbnail rounded-circle">
+@endsection
