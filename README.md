@@ -11,5 +11,7 @@
 ![](https://github-profile-trophy.vercel.app/?username=VenomError&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
 ### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=VenomError&limit=5&theme=blue-green&combine_all_yearly_contributions=true)
+<p align=center>
+<img sr="https://github-contributor-stats.vercel.app/api?username=VenomError&limit=5&theme=blue-green&combine_all_yearly_contributions=true" />
+</p>
 
