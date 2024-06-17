@@ -5,6 +5,7 @@
 # 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=VenomError&theme=blueberry&hide_border=false&include_all_commits=true&count_private=true)
 ![](https://github-readme-streak-stats.herokuapp.com/?user=VenomError&theme=blueberry&hide_border=false)<br/><p align="center">
+
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VenomError&theme=blueberry&hide_border=false&include_all_commits=true&count_private=true&layout=compact" /></p>
 
 ## 🏆 GitHub Trophies
